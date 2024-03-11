@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@200..800&display=swap"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@200..800&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <% if(locals.pageTitle) { %>
+        <title><%= pageTitle %></title>
+    <% } else { %>
+        <title>Chuck Norris Jokes</title>
+    <% } %>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <h1 class="api">API</h1>
+            <h1 class="hub">hub</h1>
+        </div>
+        <div class="icons">
+            <img src="images/facebook.png">
+            <img src="images/instagram.png">
+            <img src="images/snapchat.png">
+            <img src="images/twitter.png">
+            <img src="images/reddit.png">
+            <img src="images/linkedin.png">
+            <img src="images/pinterest.png">
+            <img src="images/whatsapp.png">
+        </div>
+    </div>
+    <br>
+    <div class="says">
+        <h1>Chuck Norris Says:</h1>
+    </div>
+    <div class="joke-container">
+        <h1 class="joke"><%= content %></h1>
+        <br>
+        <form class="nxt-form" action="/next" method="post">
+            <input class="nxt-btn" type="submit" name="next" value="NEXT">
+        </form>
+    </div>
+</body>
+</html>
